@@ -96,6 +96,33 @@ select {
   --clr-trans-wt: hsla(0, 0%, 100%, 0.75);
   --clr-lt-gr: hsl(0, 0%, 95%);
 }
+:root .card-1 {
+  background-color: hsl(31, 77%, 52%);
+}
+:root .card-1 .card-btn {
+  color: hsl(31, 77%, 52%);
+}
+:root .card-1 .card-btn:hover {
+  background-color: hsl(31, 77%, 52%);
+}
+:root .card-2 {
+  background-color: hsl(184, 100%, 22%);
+}
+:root .card-2 .card-btn {
+  color: hsl(184, 100%, 22%);
+}
+:root .card-2 .card-btn:hover {
+  background-color: hsl(184, 100%, 22%);
+}
+:root .card-3 {
+  background-color: hsl(179, 100%, 13%);
+}
+:root .card-3 .card-btn {
+  color: hsl(179, 100%, 13%);
+}
+:root .card-3 .card-btn:hover {
+  background-color: hsl(179, 100%, 13%);
+}
 
 :root {
   --mar-sm: 0.5em;
@@ -131,34 +158,22 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.container .card-1 {
-  background-color: var(--clr-or);
+@media (min-width: 550px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 60rem;
+  }
 }
-.container .card-1 .card-btn {
-  color: var(--clr-or);
-}
-.container .card-2 {
-  background-color: var(--clr-d-cy);
-}
-.container .card-2 .card-btn {
-  color: var(--clr-d-cy);
-}
-.container .card-3 {
-  background-color: var(--clr-vd-cy);
-}
-.container .card-3 .card-btn {
-  color: var(--clr-vd-cy);
-}
-
-.card {
+.container .card {
   padding: var(--pad-md);
   margin-top: -var(--pad-md);
 }
-.card img {
+.container .card img {
   max-width: 2.8rem;
   margin: var(--mar-sm) 0;
 }
-.card h1 {
+.container .card h1 {
   text-transform: uppercase;
   font-family: var(--accent);
   font-size: var(--fs-md);
@@ -167,7 +182,7 @@ body {
   color: var(--clr-lt-gr);
   margin-top: var(--mar-base);
 }
-.card P {
+.container .card P {
   font-family: var(--reg);
   font-weight: var(--fw-base);
   font-size: var(--fs-sm);
@@ -175,7 +190,35 @@ body {
   color: var(--clr-trans-wt);
   padding: var(--pad-lg) 0;
 }
-.card .card-btn {
+@media (min-width: 550px) {
+  .container .card {
+    padding: var(--pad-xl);
+  }
+  .container .card img {
+    max-width: 5rem;
+  }
+  .container .card h1 {
+    font-size: var(--fs-xl);
+    margin-top: var(--mar-sm);
+  }
+  .container .card p {
+    font-size: var(--fs-base);
+    padding: var(--pad-lg) 0;
+    margin-bottom: var(--mar-xl);
+  }
+  .container .card button {
+    font-size: var(--fs-base);
+    max-width: 10rem;
+  }
+}
+@media (min-width: 550px) {
+  .container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+.container .card-btn {
   font-family: var(--reg);
   font-size: var(--fs-sm);
   background-color: var(--clr-lt-gr);
@@ -183,4 +226,9 @@ body {
   border-style: none;
   padding: var(--pad-base) var(--pad-xl);
   margin-bottom: var(--mar-base);
+}
+.container .card-btn:hover {
+  border: 1px solid var(--clr-lt-gr);
+  cursor: pointer;
+  color: var(--clr-lt-gr);
 }/*# sourceMappingURL=style.css.map */

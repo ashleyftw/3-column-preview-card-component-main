@@ -14,6 +14,37 @@ $colors: (
     @each $cat, $clrs in $colors {
         @each $name, $val in $clrs {
             --clr-#{$name}: #{$val};
+            @if($name == or) {
+                .card-1 {
+                    background-color: #{$val};
+                    .card-btn {
+                        color: #{$val};
+                        &:hover {
+                            background-color: #{$val};
+                        }
+                    }
+                }
+            } @else if($name == d-cy) {
+                .card-2 {
+                    background-color: #{$val};
+                    .card-btn {
+                        color: #{$val};
+                        &:hover {
+                            background-color: #{$val};
+                        }
+                    }
+                }
+            } @else if($name == vd-cy) {
+                .card-3 {
+                    background-color: #{$val};
+                    .card-btn {
+                        color: #{$val};
+                        &:hover {
+                            background-color: #{$val};
+                        }
+                    }
+                }
+            }
         }
     }
-};
+}

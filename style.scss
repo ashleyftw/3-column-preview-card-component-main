@@ -5,6 +5,7 @@
 @use 'scss/base/spacer' as *;
 @use 'scss/components/buttons' as *;
 @use 'scss/abrastracts/mixins' as *;
+@use 'scss/layout/mediaquery' as *;
 @use 'scss/layout/footer' as*;
 
 body {
@@ -17,30 +18,22 @@ body {
     margin: var(--mar-base);
     border-radius: 0.5rem;
     overflow: hidden;
+    @include md() {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 60rem;
+    }
 
-    .card-1 {
-        background-color: var(--clr-or);
-        .card-btn {
-            color: var(--clr-or);
+    .card {
+        @include card();
+        @include md() {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            }
         }
-    }
-    .card-2 {
-        background-color: var(--clr-d-cy);
-        .card-btn {
-            color: var(--clr-d-cy);
-        }
-    }
-    .card-3 {
-        background-color: var(--clr-vd-cy);
-        .card-btn {
-            color: var(--clr-vd-cy);
-        }
-    }
-}
 
-.card {
-    @include card();
-    .card-btn {
-        @include btn();
+        .card-btn {
+            @include btn();
+        }
     }
-}

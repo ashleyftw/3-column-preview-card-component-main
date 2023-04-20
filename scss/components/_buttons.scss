@@ -5,5 +5,11 @@
     border-radius: 2rem;
     border-style: none;
     padding: var(--pad-base) var(--pad-xl);
-    margin-bottom: var(--mar-base)
+    margin-bottom: var(--mar-base);
+
+    &:hover {
+        border: 1px solid var(--clr-lt-gr);
+        cursor: pointer;
+        color: var(--clr-lt-gr);
+    }
 };
