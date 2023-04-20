@@ -1,0 +1,14 @@
+//google fonts
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+//font-faimly
+$fontfam: (
+    accent: "'Big Shoulders Display', cursive",
+    reg: "'Lexend Deca', sans-serif"
+);
+
+:root {
+    @each $name, $ff in $fontfam {
+        --#{$name}: #{$ff};
+    }
+};

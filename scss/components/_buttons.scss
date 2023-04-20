@@ -1,0 +1,9 @@
+@mixin btn() {
+    font-family: var(--reg);
+    font-size: var(--fs-sm);
+    background-color: var(--clr-lt-gr);
+    border-radius: 2rem;
+    border-style: none;
+    padding: var(--pad-base) var(--pad-xl);
+    margin-bottom: var(--mar-base)
+};

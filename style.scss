@@ -1,0 +1,46 @@
+@use 'scss/base/reset' as *;
+@use 'scss/base/fonts' as *;
+@use 'scss/base/typography' as *;
+@use 'scss/base/colors' as *;
+@use 'scss/base/spacer' as *;
+@use 'scss/components/buttons' as *;
+@use 'scss/abrastracts/mixins' as *;
+@use 'scss/layout/footer' as*;
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-lt-gr);
+}
+
+.container {
+    margin: var(--mar-base);
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    .card-1 {
+        background-color: var(--clr-or);
+        .card-btn {
+            color: var(--clr-or);
+        }
+    }
+    .card-2 {
+        background-color: var(--clr-d-cy);
+        .card-btn {
+            color: var(--clr-d-cy);
+        }
+    }
+    .card-3 {
+        background-color: var(--clr-vd-cy);
+        .card-btn {
+            color: var(--clr-vd-cy);
+        }
+    }
+}
+
+.card {
+    @include card();
+    .card-btn {
+        @include btn();
+    }
+}

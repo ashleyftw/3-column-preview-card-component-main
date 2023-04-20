@@ -1,0 +1,25 @@
+@mixin card() {
+    padding: var(--pad-md);
+    margin-top: -var(--pad-md);
+    img {
+        max-width: 2.8rem;
+        margin: var(--mar-sm) 0;
+    }
+    h1 {
+        text-transform: uppercase;
+        font-family: var(--accent);
+        font-size: var(--fs-md);
+        font-weight: var(--fw-thin);
+        letter-spacing: 0.05rem;
+        color: var(--clr-lt-gr);
+        margin-top: var(--mar-base);
+    }
+    P {
+        font-family: var(--reg);
+        font-weight: var(--fw-base);
+        font-size: var(--fs-sm);
+        line-height: 1.8;
+        color: var(--clr-trans-wt);
+        padding: var(--pad-lg) 0;
+    }
+};
